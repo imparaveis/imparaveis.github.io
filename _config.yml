@@ -1,4 +1,5 @@
 name: Teste, ImparaveisCorp
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-remote_theme: owner/name
+plugins: jekyll-include-cache
+remote_theme: "mmistakes/minimal-mistakes@4.15.1"
