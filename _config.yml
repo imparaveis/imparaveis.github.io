@@ -1,3 +1,4 @@
 name: Teste, ImparaveisCorp
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+remote_theme: owner/name
