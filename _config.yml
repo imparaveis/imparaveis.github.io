@@ -1,3 +1,7 @@
 title: Pessoas Imparaveis
+description: APessoas Imparaveis for GitHub Pages.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-architect
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
