@@ -6,6 +6,6 @@ title: Imparaveis - Because We Love What We Can Do
 <ul class="posts">
 
 	{% for post in site.posts %}
-		<br><iframe style="height:600px;width:800px;border:3px dotted orange;" src="{{ post.url }}"></iframe><br>
+		<br><iframe src="{{ post.url }}" class="iframe" scrolling="no" frameborder="0"></iframe><br>
 	{% endfor %}
 </ul>
