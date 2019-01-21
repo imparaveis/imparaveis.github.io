@@ -6,6 +6,6 @@ title: Imparaveis, Because We Love What We Can Do
 <ul class="posts">
 
 	{% for post in site.posts %}
-		<li><span>{{ post.date | date_to_string }}</span> » <iframe src="{{ post.url }}"></iframe>
+		<br><span>{{ post.date | date_to_string }}</span> » <iframe style="height:100%;width:100%;border:2px solid red;"src="{{ post.url }}"></iframe><br>
 	{% endfor %}
 </ul>
