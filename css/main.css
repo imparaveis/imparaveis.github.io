@@ -41,3 +41,9 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+grad1 {
+  height: 200px;
+  background-color: lightblue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(lightblue, white); /* Standard syntax (must be last) */
+}
