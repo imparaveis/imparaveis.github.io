@@ -7,7 +7,7 @@ title: Imparaveis - Because We Love What We Can Do
 
 	{% for post in site.posts %}
 		<div class="stockIframe ">
-    <iframe src="{{ post.url }}" onload="autoResize(this)" height="100%" width="100"></iframe> 
+    <iframe src="{{ post.url }}" onload="autoResize(this)" height="100%" width="100%"></iframe> 
 </div>
 
 <style>
