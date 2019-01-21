@@ -1,5 +1,5 @@
-name: Teste, ImparaveisCorp
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-plugins: jekyll-include-cache
-remote_theme: "mmistakes/minimal-mistakes@4.15.1"
+title: Pessoas Imparaveis
+description: Architect is a theme for GitHub Pages.
+show_downloads: true
+# google_analytics:
+theme: jekyll-theme-architect
