@@ -2,7 +2,9 @@
 layout: default
 title: Imparaveis, Because We Love What We Can Do
 ---
-<div class="blurb">
-	<h1>Olá </h1>
-	<p>whepa <em> teste de tag </em> Don't trust me. <a href="/about">eu sou dessas</a></p>
-</div><!-- /.blurb -->
+<h1>{{ page.title }}</h1>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+  {{ content }}
+</div>
