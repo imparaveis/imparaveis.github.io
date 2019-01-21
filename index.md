@@ -6,7 +6,6 @@ title: Imparaveis - Because We Love What We Can Do
 <ul class="posts">
 
 	{% for post in site.posts %}
-<<<<<<< HEAD
 		<div class="stockIframe ">
     <iframe src="{{ post.url }}" onload="autoResize(this)" height="100%" width="100"></iframe> 
 </div>
@@ -25,8 +24,5 @@ title: Imparaveis - Because We Love What We Can Do
    }
 </script>
 
-=======
-		<br><iframe src="{{ post.url }}" class="iframe" scrolling="no" frameborder="0"></iframe><br>
->>>>>>> 1e417d6bafa7595e206c7abda398a5b202bd74e5
 	{% endfor %}
 </ul>
