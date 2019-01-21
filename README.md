@@ -1,4 +1,4 @@
 # imparaveis.github.io
-Grupo de Estudos 
+Grupo de Estudos
 
-Projeto para estudos - blog para guardar passos 
+Projeto para estudos - blog para guardar passos
