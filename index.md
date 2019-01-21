@@ -3,8 +3,9 @@ layout: default
 title: Imparaveis, Because We Love What We Can Do
 ---
 <h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<ul class="posts">
 
-<div class="post">
-  {{ content }}
-</div>
+	{% for post in site.posts %}
+		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
