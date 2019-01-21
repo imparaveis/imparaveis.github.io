@@ -6,7 +6,7 @@ title: Imparaveis
 <ul class="posts">
 
 	{% for post in site.posts %}
-<iframe src="{{ post.url }}" width="650px"  height="600px" frameBorder="0"></iframe>
+<iframe src="{{ post.url }}" width="650px"  height="300px" frameBorder="0"></iframe>
 	{% endfor %}
 
 </ul>
