@@ -38,7 +38,7 @@ docker image ls
 docker run -p 8080:8080 -p 9990:9990 -d 
 
 
-#run criando maquina
+------ run criando maquina
 
 <b>PS D:\iso> docker build -t wildfly:teste . </b><br>
 Sending build context to Docker daemon  3.188GB
@@ -57,7 +57,7 @@ Removing intermediate container 5c4428d5fab1
 Successfully built 18f5620f5506
 Successfully tagged wildfly:teste
 SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
-PS D:\iso> docker image ls
+PS D:\iso> docker image ls<br><br>
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 wildfly             teste               18f5620f5506        10 seconds ago      675MB
 teste               latest              85d518046953        39 minutes ago      675MB
@@ -65,9 +65,9 @@ teste               latest              85d518046953        39 minutes ago      
 jboss/wildfly       latest              2602b4852593        13 days ago         675MB
 PS D:\iso>
 
-# run start maquina 
+------  run start maquina 
 
-PS D:\iso> docker image ls
+PS D:\iso> docker image ls<br><br>
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 wildfly             teste               18f5620f5506        10 seconds ago      675MB
 teste               latest              85d518046953        39 minutes ago      675MB
@@ -77,16 +77,14 @@ jboss/wildfly       latest              2602b4852593        13 days ago         
 65319609e8a0813d370d5543a4da8ae7b7ae36ede743d6b7ff9dacb9dfe9bf98
 PS D:\iso>
 
-# validando nossa app 
-
-PS D:\iso> $WebResponse = Invoke-WebRequest "http://127.0.0.1:8080/sample/"
-PS D:\iso> $WebResponse
-
-
-StatusCode        : 200
-StatusDescription : OK
-Content           : Sample "Hello, World"...
-RawContent        : HTTP/1.1 200 OK
+------ validando nossa app 
+<br>
+PS D:\iso> $WebResponse = Invoke-WebRequest "http://127.0.0.1:8080/sample/"<br>
+PS D:\iso> $WebResponse<br>
+StatusCode        : 200<br>
+StatusDescription : OK<br>
+Content           : Sample "Hello, World"...<br>
+RawContent        : HTTP/1.1 200 OK<br>
 PS D:\iso>
 
 
