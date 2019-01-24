@@ -49,33 +49,24 @@ Step 2/4 : RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent
 Removing intermediate container 6ccd396a39d4
  ---> c5df0f876435
 Step 3/4 : COPY sample.war /opt/jboss/wildfly/standalone/deployments/
- ---> 5deed7a2b4ba
-Step 4/4 : CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+ ---> 5deed7a2b4ba<br>
+Step 4/4 : CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]<br>
  ---> Running in 5c4428d5fab1
 Removing intermediate container 5c4428d5fab1
  ---> 18f5620f5506
 Successfully built 18f5620f5506
 Successfully tagged wildfly:teste
 SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
-PS D:\iso> docker image ls<br><br>
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-wildfly             teste               18f5620f5506        10 seconds ago      675MB
-teste               latest              85d518046953        39 minutes ago      675MB
-<none>              <none>              7dbf416b1fff        About an hour ago   675MB
-jboss/wildfly       latest              2602b4852593        13 days ago         675MB
-PS D:\iso>
+PS D:\iso> docker image ls<br>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>
+wildfly             teste               18f5620f5506        10 seconds ago      675MB<br>
 
-------  run start maquina 
-
+------  run start maquina <br>
 PS D:\iso> docker image ls<br><br>
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-wildfly             teste               18f5620f5506        10 seconds ago      675MB
-teste               latest              85d518046953        39 minutes ago      675MB
-<none>              <none>              7dbf416b1fff        About an hour ago   675MB
-jboss/wildfly       latest              2602b4852593        13 days ago         675MB
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>
+wildfly             teste               18f5620f5506        10 seconds ago      675MB<br>
 <b>PS D:\iso> docker run -p 8080:8080 -p 9990:9990 -d 18f5620f5506 </b><br>
-65319609e8a0813d370d5543a4da8ae7b7ae36ede743d6b7ff9dacb9dfe9bf98
-PS D:\iso>
+
 
 ------ validando nossa app 
 <br>
