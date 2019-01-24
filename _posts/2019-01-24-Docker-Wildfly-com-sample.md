@@ -2,26 +2,26 @@ Estava aqui pensando em oque fazer nessa tarde ensolarada de 24/01 e pensei, ou 
 
 Segui para um teste de docker com wildfly  + app 
 
-Meu ambiente ambiente docker desktop de testes já configurado seguindo os links abaixo (inclussive já fiz as brincadeiras do site da microsoft)
-(https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10
-https://www.spiria.com/en/blog/web-applications/enabling-windows-containers-windows-10/ ) 
+Meu ambiente ambiente docker desktop de testes já configurado seguindo os links abaixo (inclussive já fiz as brincadeiras do site da microsoft)<br>
+(https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10<br>
+https://www.spiria.com/en/blog/web-applications/enabling-windows-containers-windows-10/ ) <br>
 
-Hoje testando docker com wildfly segui o plano da pagina principal para iniciar, e me deparei com algumas questoes pra logar na console e olhando uns blogs resolvi criar minha propria imagem.
+Hoje testando docker com wildfly segui o plano da pagina principal para iniciar, e me deparei com algumas questoes pra logar na console e olhando uns blogs resolvi criar minha propria imagem.<br>
 
-links de referencia.
-**https://hub.docker.com/r/jboss/wildfly/
-** http://blog.arungupta.me/wildfly-admin-console-docker-image-techtip66/ 
+links de referencia.<br>
+**https://hub.docker.com/r/jboss/wildfly/<br>
+** http://blog.arungupta.me/wildfly-admin-console-docker-image-techtip66/ <br>
 
-Problemas que quis sanar. 
-1 - usuario na console 
-2 - Com um sample de app.  - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/
+Problemas que quis sanar. <br>
+1 - usuario na console <br>
+2 - Com um sample de app.  - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ <br>
 
 Baixei na minha maquina o sample.war e coloquei ele na mesma pasta do dockerfile 
 
 Configurei ele com os itens abaixo
 <b><br>
 FROM jboss/wildfly:latest<br>
-RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent<br><br>
+RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent<br>
 ADD your-awesome-app.war /opt/jboss/wildfly/standalone/deployments/<br>
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]<br>
 </b><br>
@@ -29,13 +29,13 @@ CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0
 e quando subi, utilizei o export das portas tcp 8080 e 9990 (ambas default). 
 No final, a app fica liberada no 127.0.0.1:8080/sample e a console abre com o usuario admin e senha Admin123# na 9990
 
-
-Comando de build 
-ref: https://docs.docker.com/engine/reference/commandline/build/
-docker build -t wildfly:teste . 
-docker image ls 
-(pega o ID) 
-docker run -p 8080:8080 -p 9990:9990 -d 
+<br>
+Comando de build <br>
+ref: https://docs.docker.com/engine/reference/commandline/build/<br>
+docker build -t wildfly:teste . <br>
+docker image ls <br>
+(pega o ID) <br>
+docker run -p 8080:8080 -p 9990:9990 -d <br>
 
 
 ------ run criando maquina
