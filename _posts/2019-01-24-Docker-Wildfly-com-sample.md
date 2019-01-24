@@ -24,7 +24,7 @@ FROM jboss/wildfly:latest
 RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent
 ADD your-awesome-app.war /opt/jboss/wildfly/standalone/deployments/
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
-</b>
+</b><br>
 
 e quando subi, utilizei o export das portas tcp 8080 e 9990 (ambas default). 
 No final, a app fica liberada no 127.0.0.1:8080/sample e a console abre com o usuario admin e senha Admin123# na 9990
@@ -40,7 +40,7 @@ docker run -p 8080:8080 -p 9990:9990 -d
 
 #run criando maquina
 
-<b>PS D:\iso> docker build -t wildfly:teste . </b>
+<b>PS D:\iso> docker build -t wildfly:teste . </b><br>
 Sending build context to Docker daemon  3.188GB
 Step 1/4 : FROM jboss/wildfly:latest
  ---> 2602b4852593
@@ -73,7 +73,7 @@ wildfly             teste               18f5620f5506        10 seconds ago      
 teste               latest              85d518046953        39 minutes ago      675MB
 <none>              <none>              7dbf416b1fff        About an hour ago   675MB
 jboss/wildfly       latest              2602b4852593        13 days ago         675MB
-<b>PS D:\iso> docker run -p 8080:8080 -p 9990:9990 -d 18f5620f5506 </b>
+<b>PS D:\iso> docker run -p 8080:8080 -p 9990:9990 -d 18f5620f5506 </b><br>
 65319609e8a0813d370d5543a4da8ae7b7ae36ede743d6b7ff9dacb9dfe9bf98
 PS D:\iso>
 
@@ -85,42 +85,8 @@ PS D:\iso> $WebResponse
 
 StatusCode        : 200
 StatusDescription : OK
-Content           : <html>
-                    <head>
-                    <title>Sample "Hello, World" Application</title>
-                    </head>
-                    <body bgcolor=white>
-
-                    <table border="0">
-                    <tr>
-                    <td>
-                    <img src="images/tomcat.gif">
-                    </td>
-                    <td>
-                    <h1>Sample "Hello, World"...
+Content           : Sample "Hello, World"...
 RawContent        : HTTP/1.1 200 OK
-                    Connection: keep-alive
-                    Accept-Ranges: bytes
-                    Content-Length: 636
-                    Content-Type: text/html
-                    Date: Thu, 24 Jan 2019 18:11:17 GMT
-                    Last-Modified: Mon, 30 Jul 2007 16:26:28 GMT
-
-                    <html>...
-Forms             : {}
-Headers           : {[Connection, keep-alive], [Accept-Ranges, bytes], [Content-Length, 636], [Content-Type,
-                    text/html]...}
-Images            : {@{innerHTML=; innerText=; outerHTML=<IMG src="images/tomcat.gif">; outerText=; tagName=IMG;
-                    src=images/tomcat.gif}}
-InputFields       : {}
-Links             : {@{innerHTML=JSP page; innerText=JSP page; outerHTML=<A href="hello.jsp">JSP page</A>;
-                    outerText=JSP page; tagName=A; href=hello.jsp}, @{innerHTML=servlet; innerText=servlet;
-                    outerHTML=<A href="hello">servlet</A>; outerText=servlet; tagName=A; href=hello}}
-ParsedHtml        : mshtml.HTMLDocumentClass
-RawContentLength  : 636
-
-
-
 PS D:\iso>
 
 
