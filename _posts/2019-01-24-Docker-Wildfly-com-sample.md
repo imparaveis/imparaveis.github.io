@@ -19,11 +19,11 @@ Problemas que quis sanar.
 Baixei na minha maquina o sample.war e coloquei ele na mesma pasta do dockerfile 
 
 Configurei ele com os itens abaixo
-<b>
-FROM jboss/wildfly:latest
-RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent
-ADD your-awesome-app.war /opt/jboss/wildfly/standalone/deployments/
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+<b><br>
+FROM jboss/wildfly:latest<br>
+RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin123# --silent<br><br>
+ADD your-awesome-app.war /opt/jboss/wildfly/standalone/deployments/<br>
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]<br>
 </b><br>
 
 e quando subi, utilizei o export das portas tcp 8080 e 9990 (ambas default). 
